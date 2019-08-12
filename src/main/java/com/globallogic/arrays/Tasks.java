@@ -13,7 +13,7 @@ public class Tasks {
 
     /*
     The first is not greater for 2,5
-        Array of real numbers is given. Find the first element in array which value do  es not exceed 2.5.
+        Array of real numbers is given. Find the first element in array which value does not exceed 2.5.
         In the case of absence the specified element print "Not Found"
     */
     public double findFirstNumber(double[] arr) {

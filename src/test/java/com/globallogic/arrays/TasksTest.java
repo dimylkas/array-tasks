@@ -16,7 +16,7 @@ class TasksTest {
     @Test
     void increaseBy2() {
         int[] actual = unit.increaseBy2(new int[]{1, 2, -5, 7, 0, 6});
-        int[] expected = {3, 4, -5, 7, 2, 8};
+        int[] expected = {3, 4, -5, 9, 2, 8};
         assertArrayEquals(expected, actual);
     }
 
@@ -37,6 +37,12 @@ class TasksTest {
     void findMax(int[] arr) {
         int actual = unit.findMax(arr);
         assertEquals(8, actual);
+    }
+
+    @Test
+    void findMaxForNegativeValues() {
+        int actual = unit.findMax(new int[]{-2, -4, -1});
+        assertEquals(-1, actual);
     }
 
     private static Stream<int[]> arraysForFindMaxTest() {
@@ -65,7 +71,7 @@ class TasksTest {
     @Test
     void negativeElementSum() {
         double actual = unit.negativeElementsSum(new double[]{-4, 5, 3, 2.2, -3.8, -8.1, 4.8});
-        assertEquals(-15.9, actual);
+        assertEquals(-15.9, actual, 0.01);
     }
 
     @Test
